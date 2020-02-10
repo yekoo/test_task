@@ -1,0 +1,64 @@
+<!doctype html>
+<html></html>
+  <head>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="drafts.css">
+  </head>
+  <body>
+
+    <div ng-app="avenicaTestTaskTrue">
+
+      <div class="app" ng-controller="TestTaskController as testTask">
+        <div class=" header">
+          <span>Angular app for Aventica</span>
+          <span class="draftCounter"> {{testTask.marked()}} </span>
+        </div>
+
+        <div class="draftAppBody">
+          <div class="draftPrepareBlock">
+
+            <div class="draftsBlock addDraftBlock">
+              <form >
+                <input type="text" ng-model="testTask.draftText"><br/>
+                <button class="lineButton btnGrey" ng-click="testTask.addDraft()">Draft</button>
+                <button class="lineButton btnGreen" ng-click="testTask.saveDraft()">Save</button>
+              </form>
+            </div>
+
+            <div class="draftsBlock draftsListBlock">
+              <h4>Draft</h4>
+
+              <div class="draftListItem" ng-repeat="draft in testTask.drafts">
+                <input type="text" ng-value="draft.text" ng-model="draft.text">
+                <button class="draftItemButton btnRed" ng-click="testTask.delDraft(this)">Remove</button>
+                <button class="draftItemButton btnGreen" ng-click="testTask.saveDraft(this)">Save</button>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="draftsBlock savedDraftsBlock">
+            <div class="savedDraftsBlockItem" ng-repeat="savedItem in testTask.saved">
+              <h3>{{savedItem.text}}</h3>
+              <div class="checkSquare" ng-style="{'background':savedItem.marked?'lime':'red'}"></div>
+              <div class="savedBottomButtons">
+                <button class="savedDraftsBlockButton" ng-click="testTask.draftSaved(this)">Draft</button>
+                <button class="savedDraftsBlockButton" ng-click="testTask.markSaved(this)">Mark</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+

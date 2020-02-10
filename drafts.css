@@ -1,0 +1,144 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
+.header{
+  background:#c8b;
+  text-align: center;
+  padding:12px;
+  color:white;
+}
+.draftCounter{
+  padding:3px;
+  border-radius: 4px;
+  background: grey;
+  position: absolute;
+  right:7px;
+  margin:0 10px;
+  padding:3px;
+}
+.app{
+  background:#aca;
+}
+.draftAppBody{
+  flex-direction: row;
+  display: flex;
+}
+.draftsBlock{
+  display:flex;
+  flex-direction: column;
+  background:#c8b;
+  margin:4px;
+  position: relative;
+  padding:12px;
+  color:white;
+}
+.draftPrepareBlock{
+  display:flex;
+  width:250px;
+  flex-direction: column;
+}
+.addDraftBlock{
+  text-align: center;
+}
+.draftsListBlock{
+}
+.draftsListBlock h4{
+  margin:0;
+}
+.savedDraftsBlock{
+  width:100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  //justify-content: space-between;
+}
+.savedDraftsBlockItem{
+  width:120px;
+  height:100px;
+  background:#faa;
+  padding: 12px;
+  position: relative;
+  display:flex;
+  margin:4px;
+}
+.savedDraftsBlockItem h3{
+  margin: 0;
+  color: black;
+  font-weight: normal;
+}
+.savedBottomButtons{
+  position: absolute;
+  bottom: 12px;
+}
+.checkSquare{
+  position: absolute;
+  right:12px;
+  top:12px;
+  background:red;
+  width:16px;
+  height:16px;
+}
+.savedDraftsBlockButton{
+  background: #a80;
+  border:0;
+  padding:7px 4px;
+  color:white;
+}
+
+
+.lineButton{
+  padding:4px;
+  color:white;
+  background: #4f4;
+  border:0;
+}
+.draftListItem{
+  margin:16px 2px;
+  padding:8px;
+  background:#faa;
+  position: relative;;
+}
+.draftListItem div{
+  color:black;
+}
+.draftListItem input{
+  border:1px solid rgba(0,0,0,0);
+  background:none
+}
+.draftListItem input:focus{
+  border:1px solid #eee;
+  background:white
+}
+
+.draftItemButton{
+  padding:4px;
+  color:white;
+  border:0;
+  position:absolute;
+  bottom:-20px;
+}
+.draftItemButton.btnGreen{
+  right:10px;
+}
+.draftItemButton.btnRed{
+  right:50px;
+}
+
+
+.btnGreen{
+  background: #3b3;
+}
+.btnGrey{
+  background: #777;
+}
+.btnRed{
+  background: #b33;
+}
+.btnBrown{
+  background: #a80;
+}
